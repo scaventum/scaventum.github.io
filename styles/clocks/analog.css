@@ -15,14 +15,15 @@
 
 .analog__title {
   width: 100px;
-  height: 25px;
+  height: 15px;
   position: absolute;
-  margin-top: 70px;
+  margin-top: 75px;
   margin-left: 95px;
   line-height: 25px;
   text-align: center;
   color: #999999;
   letter-spacing: 3px;
+  font-size: 12px;
 }
 
 .analog__second-dial {

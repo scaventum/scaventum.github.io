@@ -27,15 +27,20 @@ const render = () => {
   }
 
   const hourDial = document.createElement("div");
-  hourDial.className = "analog__hour-dial";
+  hourDial.classList.add("analog__dial--hour");
+  hourDial.classList.add("analog__dial");
   const minuteDial = document.createElement("div");
-  minuteDial.className = "analog__minute-dial";
+  minuteDial.classList.add("analog__dial--minute");
+  minuteDial.classList.add("analog__dial");
   const secondDial = document.createElement("div");
-  secondDial.className = "analog__second-dial";
+  secondDial.classList.add("analog__dial--second");
+  secondDial.classList.add("analog__dial");
   const hourMinuteAxis = document.createElement("div");
-  hourMinuteAxis.className = "analog__hour-minute-axis";
+  hourMinuteAxis.classList.add("analog__axis");
+  hourMinuteAxis.classList.add("analog__axis--hour-minute");
   const secondAxis = document.createElement("div");
-  secondAxis.className = "analog__second-axis";
+  secondAxis.classList.add("analog__axis");
+  secondAxis.classList.add("analog__axis--second");
 
   frame.append(hourDial);
   frame.append(minuteDial);
@@ -47,7 +52,9 @@ const render = () => {
     const hour = i + 1;
     const number = document.createElement("span");
     number.innerHTML = hour;
+    number.style.transform = `rotate(-${hour * 30}deg)`;
     const numberPosition = document.createElement("div");
+    numberPosition.style.transform = `rotate(${hour * 30}deg)`;
     numberPosition.append(number);
     numberPosition.classList.add("analog__number");
     numberPosition.classList.add(`analog__number--${hour}`);
@@ -64,15 +71,15 @@ const start = (time) => {
   const hourDialDegree = getHourDialDegree(time);
 
   document.querySelector(
-    ".analog__second-dial"
+    ".analog__dial--second"
   ).style.transform = `rotate(${smoothSecondDialDegree}deg)`;
 
   document.querySelector(
-    ".analog__minute-dial"
+    ".analog__dial--minute"
   ).style.transform = `rotate(${minuteDialDegree}deg)`;
 
   document.querySelector(
-    ".analog__hour-dial"
+    ".analog__dial--hour"
   ).style.transform = `rotate(${hourDialDegree}deg)`;
 };
 

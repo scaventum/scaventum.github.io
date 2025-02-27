@@ -1,0 +1,26 @@
+@import "./clocks/waktu-indonesia.css";
+@import "./clocks/analog.css";
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.clock {
+  width: 50vw;
+  height: 50vh;
+  min-width: 320px;
+  min-height: 320px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

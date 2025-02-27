@@ -1,0 +1,197 @@
+#analog {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.analog__frame {
+  width: 300px;
+  height: 300px;
+  border: 5px solid #000000;
+  border-radius: 9999px;
+  overflow: hidden;
+  position: relative;
+  background-color: #ffffff;
+  box-shadow: inset 0px 0px 5px #000000;
+}
+
+.analog__title {
+  width: 100px;
+  height: 25px;
+  position: absolute;
+  margin-top: 70px;
+  margin-left: 95px;
+  line-height: 25px;
+  text-align: center;
+  color: #999999;
+  letter-spacing: 3px;
+}
+
+.analog__second-dial {
+  background-color: #ff0000;
+  height: 105px;
+  width: 2px;
+  transform-origin: bottom center;
+  border-radius: 9999px;
+  position: absolute;
+  margin-left: 144px;
+  margin-top: 40px;
+  box-shadow: 0px 0px 5px #999999;
+}
+
+.analog__minute-dial {
+  background-color: #000000;
+  height: 105px;
+  width: 4px;
+  transform-origin: bottom center;
+  border-radius: 9999px;
+  position: absolute;
+  margin-left: 143px;
+  margin-top: 40px;
+  box-shadow: 0px 0px 5px #999999;
+}
+
+.analog__hour-dial {
+  background-color: #000000;
+  height: 75px;
+  width: 6px;
+  transform-origin: bottom center;
+  border-radius: 9999px;
+  position: absolute;
+  margin-left: 142px;
+  margin-top: 70px;
+  box-shadow: 0px 0px 5px #999999;
+}
+
+.analog__hour-minute-axis {
+  height: 10px;
+  width: 10px;
+  margin-top: 140px;
+  margin-left: 140px;
+  background-color: #000000;
+  box-shadow: 0px 0px 5px #999999;
+  border-radius: 9999px;
+  position: absolute;
+}
+
+.analog__second-axis {
+  height: 6px;
+  width: 6px;
+  margin-top: 142px;
+  margin-left: 142px;
+  background-color: #ff0000;
+  border-radius: 9999px;
+  position: absolute;
+}
+
+.analog__meter {
+  height: 5px;
+  width: 2px;
+  margin-left: 144px;
+  background-color: #000000;
+  position: absolute;
+  transform-origin: center 145px;
+}
+.analog__meter--hour {
+  height: 10px;
+}
+
+.analog__number {
+  height: 290px;
+  width: 50px;
+  position: absolute;
+  display: flex;
+  font-size: 24px;
+  margin-left: 120px;
+}
+
+.analog__number > span {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.analog__number--large {
+  font-size: 32px;
+}
+
+.analog__number--12 {
+  transform: rotate(0deg);
+}
+
+.analog__number--1 {
+  transform: rotate(30deg);
+}
+.analog__number--1 > span {
+  transform: rotate(-30deg);
+}
+
+.analog__number--2 {
+  transform: rotate(60deg);
+}
+.analog__number--2 > span {
+  transform: rotate(-60deg);
+}
+
+.analog__number--3 {
+  transform: rotate(90deg);
+}
+.analog__number--3 > span {
+  transform: rotate(-90deg);
+}
+
+.analog__number--4 {
+  transform: rotate(120deg);
+}
+.analog__number--4 > span {
+  transform: rotate(-120deg);
+}
+
+.analog__number--5 {
+  transform: rotate(150deg);
+}
+.analog__number--5 > span {
+  transform: rotate(-150deg);
+}
+
+.analog__number--6 {
+  transform: rotate(180deg);
+}
+.analog__number--6 > span {
+  transform: rotate(-180deg);
+}
+
+.analog__number--7 {
+  transform: rotate(210deg);
+}
+.analog__number--7 > span {
+  transform: rotate(-210deg);
+}
+
+.analog__number--8 {
+  transform: rotate(240deg);
+}
+.analog__number--8 > span {
+  transform: rotate(-240deg);
+}
+
+.analog__number--9 {
+  transform: rotate(270deg);
+}
+.analog__number--9 > span {
+  transform: rotate(-270deg);
+}
+
+.analog__number--10 {
+  transform: rotate(300deg);
+}
+.analog__number--10 > span {
+  transform: rotate(-300deg);
+}
+
+.analog__number--11 {
+  transform: rotate(330deg);
+}
+.analog__number--11 > span {
+  transform: rotate(-330deg);
+}

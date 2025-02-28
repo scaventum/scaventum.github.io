@@ -1,5 +1,32 @@
-#analog {
-  font-family: Arial, Helvetica, sans-serif;
+@font-face {
+  font-family: "Kode Mono";
+  src: URL("../fonts/KodeMono-VariableFont_wght.ttf") format("truetype");
+}
+@font-face {
+  font-family: "7seg";
+  src: URL("../fonts/7seg.ttf") format("truetype");
+}
+
+#meter {
+  color: #333333;
+}
+
+.meter__glass {
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  opacity: 0.25;
+  background: linear-gradient(
+    45deg,
+    #000 5%,
+    #fff 10%,
+    #333 30%,
+    #999 50%,
+    #333 70%,
+    #fff 80%,
+    #000 95%
+  );
+  border-radius: 9999px;
 }
 
 .meter__frame--second {
@@ -8,19 +35,21 @@
   border-radius: 9999px;
   overflow: hidden;
   position: relative;
-  background-color: #333333;
-  border: 10px solid #f1f1ee;
+  background-color: #000000;
+  border: 10px solid #f1f1dd;
+  box-shadow: 0 0 5px #999999, inset 0 0 5px #f1f1dd;
 }
+
 .meter__frame--minute {
   width: 260px;
   height: 260px;
   border-radius: 9999px;
   overflow: hidden;
   position: absolute;
-  background-color: #333333;
+  background-color: #000000;
   margin-top: 10px;
   margin-left: 10px;
-  border: 2px solid #f1f1ee;
+  border: 2px solid #999999;
 }
 .meter__frame--hour {
   width: 236px;
@@ -28,10 +57,10 @@
   border-radius: 9999px;
   overflow: hidden;
   position: absolute;
-  background-color: #333333;
+  background-color: #000000;
   margin-top: 10px;
   margin-left: 10px;
-  border: 2px solid #f1f1ee;
+  border: 2px solid #999999;
 }
 .meter__frame--digital {
   width: 212px;
@@ -39,9 +68,34 @@
   border-radius: 9999px;
   overflow: hidden;
   position: absolute;
-  background-color: #f1f1ee;
+  background-color: #f1f1dd;
   margin-top: 10px;
   margin-left: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 5px #f1f1dd;
+}
+
+.meter__grid {
+  width: 2px;
+  background-color: #333333;
+  position: absolute;
+}
+.meter__grid--second {
+  height: 280px;
+  margin-left: 139px;
+}
+.meter__grid--minute {
+  height: 256px;
+  margin-left: 127px;
+}
+.meter__grid--hour {
+  height: 232px;
+  margin-left: 115px;
+}
+.meter__grid--light {
+  background-color: #666666;
 }
 
 .meter__dial {
@@ -64,4 +118,58 @@
 .meter__dial--hour {
   height: 116px;
   margin-left: 115px;
+}
+
+.meter__digital {
+  width: 123px;
+  height: 102px;
+  font-family: "7Seg";
+  gap: 6px;
+}
+
+.meter__digital__hour {
+  font-size: 48px;
+  height: 48px;
+  width: 62px;
+  position: absolute;
+  margin-left: 30px;
+}
+.meter__digital__hour::before {
+  content: "88";
+  position: absolute;
+  opacity: 0.1;
+}
+.meter__digital__minute {
+  font-size: 48px;
+  height: 48px;
+  width: 62px;
+  position: absolute;
+  margin-top: 54px;
+  margin-left: 30px;
+}
+.meter__digital__minute::before {
+  content: "88";
+  position: absolute;
+  opacity: 0.1;
+}
+.meter__digital__second {
+  font-size: 12px;
+  width: 15px;
+  position: absolute;
+  margin-left: 98px;
+}
+.meter__digital__second::before {
+  content: "88";
+  position: absolute;
+  opacity: 0.1;
+}
+
+.meter__digital__date {
+  font-family: "Kode Mono";
+  position: absolute;
+  width: 62px;
+  font-size: 8px;
+  margin-left: 30px;
+  margin-top: 108px;
+  text-align: center;
 }

@@ -5,17 +5,21 @@ import {
 } from "../utilities/dials.js";
 
 const render = () => {
-  const analog = document.querySelector("#analog");
+  // Get main clock component
+  const clock = document.querySelector("#analog");
 
+  // Create clock frame
   const frame = document.createElement("div");
   frame.className = "analog__frame";
-  analog.append(frame);
+  clock.append(frame);
 
+  // Create clock title
   const title = document.createElement("div");
   title.innerHTML = "ANALOG";
   title.className = "analog__title";
   frame.append(title);
 
+  // Create clock meters
   for (let i = 0; i < 60; i++) {
     const meter = document.createElement("div");
     meter.classList.add("analog__meter");
@@ -26,6 +30,7 @@ const render = () => {
     frame.append(meter);
   }
 
+  // Create clock dials
   const hourDial = document.createElement("div");
   hourDial.classList.add("analog__dial--hour");
   hourDial.classList.add("analog__dial");
@@ -48,6 +53,7 @@ const render = () => {
   frame.append(secondDial);
   frame.append(secondAxis);
 
+  // Create clock hours
   for (let i = 0; i < 12; i++) {
     const hour = i + 1;
     const number = document.createElement("span");
@@ -66,18 +72,18 @@ const render = () => {
 };
 
 const start = (time) => {
+  // Get clock dials degree
   const smoothSecondDialDegree = getSmoothSecondDialDegree(time);
   const minuteDialDegree = getMinuteDialDegree(time);
   const hourDialDegree = getHourDialDegree(time);
 
+  // Set clock dials degree
   document.querySelector(
     ".analog__dial--second"
   ).style.transform = `rotate(${smoothSecondDialDegree}deg)`;
-
   document.querySelector(
     ".analog__dial--minute"
   ).style.transform = `rotate(${minuteDialDegree}deg)`;
-
   document.querySelector(
     ".analog__dial--hour"
   ).style.transform = `rotate(${hourDialDegree}deg)`;

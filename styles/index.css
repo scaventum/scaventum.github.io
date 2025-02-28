@@ -1,5 +1,6 @@
-@import "./clocks/waktu-indonesia.css";
 @import "./clocks/analog.css";
+@import "./clocks/meter.css";
+@import "./clocks/waktu-indonesia.css";
 
 * {
   box-sizing: border-box;

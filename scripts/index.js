@@ -2,10 +2,12 @@ import {
   render as analogRender,
   start as analogStart,
 } from "./clocks/analog.js";
-import { start as startWaktuIndonesia } from "./clocks/waktu-indonesia.js";
+import { render as meterRender, start as meterStart } from "./clocks/meter.js";
+import { start as waktuIndonesiaStart } from "./clocks/waktu-indonesia.js";
 
 export const render = () => {
   analogRender();
+  meterRender();
 };
 
 export const startTime = () => {
@@ -31,7 +33,8 @@ export const startTime = () => {
   };
 
   analogStart(timeObject);
-  startWaktuIndonesia(timeObject);
+  meterStart(timeObject);
+  waktuIndonesiaStart(timeObject);
 
   setTimeout(startTime, 10);
 };

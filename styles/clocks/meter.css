@@ -18,13 +18,13 @@
   opacity: 0.25;
   background: linear-gradient(
     45deg,
-    #000 5%,
+    #333 5%,
     #fff 10%,
     #333 30%,
     #999 50%,
     #333 70%,
     #fff 80%,
-    #000 95%
+    #333 95%
   );
   border-radius: 9999px;
 }
@@ -36,8 +36,8 @@
   overflow: hidden;
   position: relative;
   background-color: #000000;
-  border: 10px solid #f1f1dd;
-  box-shadow: 0 0 5px #999999, inset 0 0 5px #f1f1dd;
+  border: 10px solid #fffffe;
+  box-shadow: 0 0 5px #999999, inset 0 0 5px #fffffe;
 }
 
 .meter__frame--minute {
@@ -68,13 +68,13 @@
   border-radius: 9999px;
   overflow: hidden;
   position: absolute;
-  background-color: #f1f1dd;
+  background-color: #fffffe;
   margin-top: 10px;
   margin-left: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 0 5px #f1f1dd;
+  box-shadow: 0 0 5px #fffffe;
 }
 
 .meter__grid {

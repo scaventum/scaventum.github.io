@@ -17,8 +17,6 @@ main {
 }
 
 .clock {
-  width: 50vw;
-  height: 50vh;
   min-width: 320px;
   min-height: 320px;
   display: flex;

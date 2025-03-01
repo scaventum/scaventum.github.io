@@ -69,6 +69,11 @@ const render = () => {
     }
     frame.append(numberPosition);
   }
+
+  // Create glass
+  const glass = document.createElement("div");
+  glass.classList.add("analogue__glass");
+  clock.append(glass);
 };
 
 const start = (time) => {

@@ -6,25 +6,25 @@ import {
 
 const render = () => {
   // Get main clock component
-  const clock = document.querySelector("#analog");
+  const clock = document.querySelector("#analogue");
 
   // Create clock frame
   const frame = document.createElement("div");
-  frame.className = "analog__frame";
+  frame.className = "analogue__frame";
   clock.append(frame);
 
   // Create clock title
   const title = document.createElement("div");
-  title.innerHTML = "ANALOG";
-  title.className = "analog__title";
+  title.innerHTML = "ANALOGUE";
+  title.className = "analogue__title";
   frame.append(title);
 
   // Create clock meters
   for (let i = 0; i < 60; i++) {
     const meter = document.createElement("div");
-    meter.classList.add("analog__meter");
+    meter.classList.add("analogue__meter");
     if (i % 5 == 0) {
-      meter.classList.add("analog__meter--hour");
+      meter.classList.add("analogue__meter--hour");
     }
     meter.style.transform = `rotate(${i * 6}deg)`;
     frame.append(meter);
@@ -32,20 +32,20 @@ const render = () => {
 
   // Create clock dials
   const hourDial = document.createElement("div");
-  hourDial.classList.add("analog__dial--hour");
-  hourDial.classList.add("analog__dial");
+  hourDial.classList.add("analogue__dial--hour");
+  hourDial.classList.add("analogue__dial");
   const minuteDial = document.createElement("div");
-  minuteDial.classList.add("analog__dial--minute");
-  minuteDial.classList.add("analog__dial");
+  minuteDial.classList.add("analogue__dial--minute");
+  minuteDial.classList.add("analogue__dial");
   const secondDial = document.createElement("div");
-  secondDial.classList.add("analog__dial--second");
-  secondDial.classList.add("analog__dial");
+  secondDial.classList.add("analogue__dial--second");
+  secondDial.classList.add("analogue__dial");
   const hourMinuteAxis = document.createElement("div");
-  hourMinuteAxis.classList.add("analog__axis");
-  hourMinuteAxis.classList.add("analog__axis--hour-minute");
+  hourMinuteAxis.classList.add("analogue__axis");
+  hourMinuteAxis.classList.add("analogue__axis--hour-minute");
   const secondAxis = document.createElement("div");
-  secondAxis.classList.add("analog__axis");
-  secondAxis.classList.add("analog__axis--second");
+  secondAxis.classList.add("analogue__axis");
+  secondAxis.classList.add("analogue__axis--second");
 
   frame.append(hourDial);
   frame.append(minuteDial);
@@ -62,10 +62,10 @@ const render = () => {
     const numberPosition = document.createElement("div");
     numberPosition.style.transform = `rotate(${hour * 30}deg)`;
     numberPosition.append(number);
-    numberPosition.classList.add("analog__number");
-    numberPosition.classList.add(`analog__number--${hour}`);
+    numberPosition.classList.add("analogue__number");
+    numberPosition.classList.add(`analogue__number--${hour}`);
     if (hour % 3 == 0) {
-      numberPosition.classList.add(`analog__number--large`);
+      numberPosition.classList.add(`analogue__number--large`);
     }
     frame.append(numberPosition);
   }
@@ -79,13 +79,13 @@ const start = (time) => {
 
   // Set clock dials degree
   document.querySelector(
-    ".analog__dial--second"
+    ".analogue__dial--second"
   ).style.transform = `rotate(${smoothSecondDialDegree}deg)`;
   document.querySelector(
-    ".analog__dial--minute"
+    ".analogue__dial--minute"
   ).style.transform = `rotate(${minuteDialDegree}deg)`;
   document.querySelector(
-    ".analog__dial--hour"
+    ".analogue__dial--hour"
   ).style.transform = `rotate(${hourDialDegree}deg)`;
 };
 

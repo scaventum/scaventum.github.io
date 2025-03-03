@@ -3,10 +3,12 @@ import {
   start as analogueStart,
 } from "./clocks/analogue.js";
 import { render as meterRender, start as meterStart } from "./clocks/meter.js";
+import { render as alarmRender, start as alarmStart } from "./clocks/alarm.js";
 
 export const render = () => {
   analogueRender();
   meterRender();
+  alarmRender();
 };
 
 export const startTime = () => {
@@ -33,6 +35,7 @@ export const startTime = () => {
 
   analogueStart(timeObject);
   meterStart(timeObject);
+  alarmStart(timeObject);
 
   setTimeout(startTime, 10);
 };

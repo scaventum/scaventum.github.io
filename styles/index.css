@@ -1,5 +1,6 @@
 @import "./clocks/analogue.css";
 @import "./clocks/meter.css";
+@import "./clocks/alarm.css";
 
 * {
   box-sizing: border-box;

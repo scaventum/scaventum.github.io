@@ -1,0 +1,42 @@
+#cyber {
+  color: #333333;
+}
+
+.cyber__frame {
+  width: 300px;
+  height: 300px;
+  border-radius: 9999px;
+  overflow: hidden;
+}
+
+.cyber__arc {
+  --b: 10px; /* the boder thickness */
+  --a: 350deg; /* control the progression */
+  --_g: /var(--b) var(--b) no-repeat radial-gradient(50% 50%, #000 97%, #0000);
+  aspect-ratio: 1;
+  padding: var(--b);
+  border-radius: 50%;
+
+  mask: top var(--_g),
+    calc(50% + 50% * sin(var(--a))) calc(50% - 50% * cos(var(--a))) var(--_g),
+    linear-gradient(#0000 0 0) content-box intersect,
+    conic-gradient(#000 var(--a), #0000 0);
+  position: absolute;
+}
+
+.cyber__arc--hour {
+  width: 300px;
+  background: #339933;
+}
+
+.cyber__arc--minute {
+  width: 260px;
+  background: #33cc33;
+  margin: 20px;
+}
+
+.cyber__arc--second {
+  width: 220px;
+  background: #33ff33;
+  margin: 40px;
+}

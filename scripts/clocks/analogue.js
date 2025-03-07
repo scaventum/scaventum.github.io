@@ -1,7 +1,7 @@
 import {
-  getSmoothSecondDialDegree,
   getMinuteDialDegree,
   getHourDialDegree,
+  getSecondDialDegree,
 } from "../utilities/dials.js";
 
 const render = () => {
@@ -78,14 +78,14 @@ const render = () => {
 
 const start = (time) => {
   // Get clock dials degree
-  const smoothSecondDialDegree = getSmoothSecondDialDegree(time);
+  const secondDialDegree = getSecondDialDegree(time);
   const minuteDialDegree = getMinuteDialDegree(time);
   const hourDialDegree = getHourDialDegree(time);
 
   // Set clock dials degree
   document.querySelector(
     ".analogue__dial--second"
-  ).style.transform = `rotate(${smoothSecondDialDegree}deg)`;
+  ).style.transform = `rotate(${secondDialDegree}deg)`;
   document.querySelector(
     ".analogue__dial--minute"
   ).style.transform = `rotate(${minuteDialDegree}deg)`;

@@ -1,11 +1,17 @@
+@font-face {
+  font-family: "Orbitron";
+  src: URL("../fonts/Orbitron-VariableFont_wght.ttf") format("truetype");
+}
+
 #cyber {
-  color: #333333;
+  color: #000000;
+  font-family: "Orbitron";
 }
 
 .cyber__frame {
   width: 300px;
   height: 300px;
-  border-radius: 9999px;
+  border-radius: 50%;
   overflow: hidden;
 }
 
@@ -39,4 +45,41 @@
   width: 220px;
   background: #33ff33;
   margin: 40px;
+}
+
+.cyber__digital {
+  width: 180px;
+  height: 180px;
+  margin: 60px;
+  position: absolute;
+  background: radial-gradient(circle at center, #ffffffff 0, #ffffff00 50%);
+  border-radius: 50%;
+}
+
+.cyber__digital__day {
+  width: 180px;
+  height: 10px;
+  margin-top: 57px;
+  line-height: 10px;
+  font-size: 10px;
+  text-align: center;
+}
+
+.cyber__digital__time {
+  width: 180px;
+  height: 36px;
+  margin-top: 5px;
+  line-height: 36px;
+  font-size: 36px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.cyber__digital__date {
+  width: 180px;
+  height: 10px;
+  margin-top: 5px;
+  line-height: 10px;
+  font-size: 10px;
+  text-align: center;
 }
